@@ -5,7 +5,7 @@
             <PokemonDetailsResumeSheet 
                 :imageUrl="pokemonData?.sprites.other.dream_world.front_default"
             />
-            <PokemonDetailsMainSheet />
+            <PokemonDetailsMainSheet :pokemonData="pokemonData"/>
         </v-row>
       </v-container>
     </v-main>

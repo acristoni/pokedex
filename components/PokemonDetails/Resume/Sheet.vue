@@ -4,8 +4,8 @@
         md="4"
     >
         <v-sheet
-        min-height="268"
-        rounded="lg"
+            min-height="268"
+            rounded="lg"
         >
             <PokemonDetailsResumeImage :imageUrl="imageUrl"/>
         </v-sheet>
