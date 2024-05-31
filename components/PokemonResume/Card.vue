@@ -3,6 +3,7 @@
     class="d-flex flex-column pa-4 justify-center align-center"
     hover
     @mouseenter="playPokemonCry"
+    @click="goToDetailsPage"
   >
     <PokemonResumeImage :imageUrl="pokemonData?.sprites.front_default"/>
     <span>#{{ pokemonData?.id }}</span>
@@ -35,6 +36,9 @@
         } else {
           console.error('URL do áudio não encontrada.');
         }
+      },
+      goToDetailsPage() {
+        navigateTo(`/details/${this.pokemonData.id}`)
       }
     }
   }
