@@ -10,8 +10,5 @@
 <script>
     export default {
         props: ['imageUrl'],
-        setup(props) {
-            console.log("🚀 ~ setup ~ props:", props.imageUrl)
-        }
     }
 </script>
