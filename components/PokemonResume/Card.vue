@@ -1,5 +1,8 @@
 <template>
-  <v-card class="d-flex flex-column pa-4 justify-center align-center">
+  <v-card 
+    class="d-flex flex-column pa-4 justify-center align-center"
+    hover
+  >
     <PokemonResumeImage :imageUrl="pokemonData?.sprites.front_default"/>
     <span>#{{ pokemonData?.id }}</span>
     <span>{{ name }}</span>
