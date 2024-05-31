@@ -1,20 +1,23 @@
 <template>
     <v-container>
-        <v-row>
-        <template v-for="n in 4" :key="n">  
-            <v-col
-            v-for="j in 6"
-            :key="`${n}${j}`"
+      <v-row>
+        <template v-for="(pokemon) in pokemons" :key="index">  
+          <v-col
             cols="6"
-            md="2"
-            >
-            <v-sheet height="150"></v-sheet>
-            </v-col>
+            md="3"
+          >
+            <PokemonResumeCard 
+              :name="pokemon.name" 
+              :url="pokemon.url"
+            />
+          </v-col>
         </template>
-        </v-row>
+      </v-row>
     </v-container>
 </template>
-
-<script setup>
-
-</script>       
+  
+<script setup>  
+    const pokemons = ref([])      
+    const { data, pending, error } = await useFetch('https://pokeapi.co/api/v2/pokemon',{});
+    pokemons.value = data.value.results;
+</script>      
