@@ -1,7 +1,9 @@
 <template>
     <v-app id="inspire">  
       <v-app-bar>  
-        <v-app-bar-title>Pokedex</v-app-bar-title>
+        <v-app-bar-title>
+          <h1>Pokedex</h1>
+        </v-app-bar-title>
       </v-app-bar>
   
       <v-navigation-drawer
