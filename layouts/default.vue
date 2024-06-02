@@ -13,8 +13,15 @@
         </v-btn>
       </NuxtLink>
     </v-app-bar>
-    <v-main class="bg-grey-lighten-2">
+    <v-main class="bg-main">
       <slot></slot>
     </v-main>
   </v-app>
 </template>
+
+<style scoped>
+  .bg-main {
+    background: url('assets/images/pokemonbg.jpg') no-repeat center center fixed;
+    background-size: cover;
+  }
+</style>
