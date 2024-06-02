@@ -1,14 +1,12 @@
 <template>
-       <v-main class="bg-grey-lighten-3">
-      <v-container>
+    <v-container>
         <v-row>
             <PokemonDetailsResumeSheet 
                 :imageUrl="pokemonData?.sprites.other.dream_world.front_default"
             />
             <PokemonDetailsMainSheet :pokemonData="pokemonData"/>
         </v-row>
-      </v-container>
-    </v-main>
+    </v-container>
 </template>
   
 <script setup>  
