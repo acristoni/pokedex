@@ -1,9 +1,13 @@
 <template>
   <v-app id="inspire">  
-    <v-app-bar>  
+    <v-app-bar style="padding: 12px;">  
       <v-app-bar-title>
         <NuxtLink to="/">
-          <h1>Pokedex</h1>
+          <v-img
+            :width="181"
+            src="assets/images/pokemon.png"
+            cover
+          ></v-img>
         </NuxtLink>
       </v-app-bar-title>
       <v-spacer></v-spacer>
@@ -13,7 +17,7 @@
         </v-btn>
       </NuxtLink>
     </v-app-bar>
-    <v-main class="bg-main">
+    <v-main class="bg-main" style="margin-top: 24px;">
       <slot></slot>
     </v-main>
   </v-app>

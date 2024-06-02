@@ -5,7 +5,7 @@
     >
       <v-text-field
         v-model="searchTerm"
-        label="Procure um Pokemon"
+        label="Search a Pokemon"
         variant="solo"
         @keyup.enter="searchPokemon"
       ></v-text-field>
