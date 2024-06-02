@@ -3,7 +3,7 @@
     <div
       style="width: 100%; display: flex; justify-content: center; padding: 4;"
     >
-      <v-card style="padding: 8px;">
+      <v-card style="padding: 8px; margin-bottom: 16px;">
         <h1>History</h1>
       </v-card>
     </div>
