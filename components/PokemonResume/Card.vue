@@ -6,8 +6,8 @@
     @click="goToDetailsPage"
   >
     <PokemonResumeImage :imageUrl="pokemonData?.sprites.front_default"/>
-    <span>#{{ pokemonData?.id }}</span>
-    <span>{{ name }}</span>
+    <h4>#{{ pokemonData?.id }}</h4>
+    <h4>{{ capitalizeFirstLetters(name) }}</h4>
   </v-card>
 </template>
 

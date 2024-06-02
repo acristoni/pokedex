@@ -17,7 +17,9 @@
                         md="6"
                     >
                         <div class="column-content">
-                            Primeira Coluna
+                            <PokemonDetailsMainAbilities 
+                                :abilities="pokemonData?.abilities"
+                            />
                         </div>
                     </v-col>
                     <v-col
@@ -25,7 +27,9 @@
                         md="6"
                     >
                         <div class="column-content">
-                            Segunda Coluna
+                            <PokemonDetailsMainLocationAreas 
+                                :locationAreasUrl="pokemonData?.location_area_encounters" 
+                            />
                         </div>
                     </v-col>
                 </v-row>
