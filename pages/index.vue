@@ -29,7 +29,7 @@
       <v-btn 
         class="mt-4"
         @click="handleGetMorePokemonsButton"
-      >Ver mais Pokemons</v-btn>
+      >See more Pokemons</v-btn>
     </div>
   </v-container>
 </template>
@@ -39,12 +39,11 @@
   const nextUrl = ref(null);
   const searchTerm = ref('');
 
-  const { data, pending, error } = await useFetch('https://pokeapi.co/api/v2/pokemon',{});
+  const { data } = await useFetch('https://pokeapi.co/api/v2/pokemon',{});
   pokemons.value = data.value.results;
   nextUrl.value = data.value.next;
 
   const handleGetMorePokemonsButton = async () => {
-    console.log('Clicou no botão');
     if (nextUrl.value) {
       const { data: newData } = await useFetch(nextUrl.value,{});
       pokemons.value = [...pokemons.value, ...newData.value.results];

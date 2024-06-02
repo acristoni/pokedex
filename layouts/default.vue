@@ -1,32 +1,20 @@
 <template>
-    <v-app id="inspire">  
-      <v-app-bar>  
-        <v-app-bar-title>
+  <v-app id="inspire">  
+    <v-app-bar>  
+      <v-app-bar-title>
+        <NuxtLink to="/">
           <h1>Pokedex</h1>
-        </v-app-bar-title>
-      </v-app-bar>
-  
-      <v-navigation-drawer
-        v-model="drawer"
-        temporary
-      >
-        <!--  -->
-      </v-navigation-drawer>
-  
-      <v-main class="bg-grey-lighten-2">
-        <slot></slot>
-      </v-main>
-    </v-app>
-  </template>
-  
-  <script setup>
-    import { ref } from 'vue'
-  
-    const drawer = ref(null)
-  </script>
-  
-  <script>
-    export default {
-      data: () => ({ drawer: null }),
-    }
-  </script>
+        </NuxtLink>
+      </v-app-bar-title>
+      <v-spacer></v-spacer>
+      <NuxtLink to="/history">
+        <v-btn icon>
+          <v-icon>mdi-history</v-icon>
+        </v-btn>
+      </NuxtLink>
+    </v-app-bar>
+    <v-main class="bg-grey-lighten-2">
+      <slot></slot>
+    </v-main>
+  </v-app>
+</template>
