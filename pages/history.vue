@@ -3,7 +3,9 @@
     <div
       style="width: 100%; display: flex; justify-content: center; padding: 4;"
     >
-      <h1>History</h1>
+      <v-card style="padding: 8px;">
+        <h1>History</h1>
+      </v-card>
     </div>
     <v-row>
       <template v-if="pokemons.length">
@@ -23,7 +25,9 @@
         <div
           style="width: 100%; display: flex; justify-content: center; padding: 20px;"
         >
-          <h2>There is no Pokemon visited</h2>
+          <v-card style="padding: 8px;">
+            <h2>There is no Pokemon visited</h2>
+          </v-card>
         </div>
       </template>
     </v-row>
